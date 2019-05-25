@@ -5,12 +5,18 @@ import java.util.Optional;
 
 import org.hldservices.ams.dao.UserAccountRepository;
 import org.hldservices.ams.entity.UserAccount;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserAccountServiceImpl implements UserAccountService {
 
 	private UserAccountRepository userAccountRepository;
+	
+	@Autowired
+	public UserAccountServiceImpl(UserAccountRepository theUserAccountRepository) {
+		this.userAccountRepository = theUserAccountRepository;
+	}
 	
 	@Override
 	public List<UserAccount> findAll() {

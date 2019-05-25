@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.or">
+<head>
+	
+	<!-- Required meta tags -->
+	<meta charset="UTF-8"  name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<title>User AccountsInsert Directory</title>
+</head>
+<body>
+
+	<div class="container">
+	
+	<h3>User Accounts Directory</h3>
+	
+	
+	<hr>
+	
+	
+	<table class="table table-border table-striped">
+	
+		<thead class="thead-dark">
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Date of birth</th>
+				<th>Email</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr th:each="tempUserAccount: ${userAccounts}">
+			<td th:text="${tempUserAccount.firstName}">
+			<td th:text="${tempUserAccount.lastName}">
+			<td th:text="${tempUserAccount.dateOfBirth}">
+			<td th:text="${tempUserAccount.email}">
+		</tbody>
+	</table>
+	
+	</div>
+
+</body>
+</html>
