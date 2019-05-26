@@ -69,4 +69,13 @@ public class UserAccountController {
     	return "useraccounts/user-account-form";
     	
     }
+    
+    @GetMapping("/delete")
+    public String delete(@RequestParam("userAccountId") int theId) {
+    	
+    	userAccountService.deleteById(theId);
+    	
+    	return "redirect:/user-accounts/list";
+    	
+    }
 }

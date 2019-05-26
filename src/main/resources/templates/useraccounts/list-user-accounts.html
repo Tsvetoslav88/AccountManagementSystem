@@ -45,6 +45,9 @@
 			<td>
 				<a th:href="@{/user-accounts/showFormForUpdate(userAccountId=${tempUserAccount.id})}"
 					class="btn btn-info btn-sm">Update</a>
+				
+				<a th:href="@{/user-accounts/delete(userAccountId=${tempUserAccount.id})}"
+					class="btn btn-danger btn-sm">Delete</a>
 			
 			</td>
 			
