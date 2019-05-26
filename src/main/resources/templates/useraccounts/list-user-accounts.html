@@ -39,7 +39,9 @@
 		<tr th:each="tempUserAccount: ${userAccounts}">
 			<td th:text="${tempUserAccount.firstName}">
 			<td th:text="${tempUserAccount.lastName}">
-			<td th:text="${tempUserAccount.dateOfBirth}">
+			<!-- <td th:text="${tempUserAccount.dateOfBirth}">-->
+			<td th:text="${#dates.format(tempUserAccount.dateOfBirth, 'dd-MM-yyyy')}"></td>
+			
 			<td th:text="${tempUserAccount.email}">
 		</tbody>
 	</table>
