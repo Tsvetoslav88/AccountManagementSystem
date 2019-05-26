@@ -41,9 +41,16 @@
 			<td th:text="${tempUserAccount.lastName}">
 			<!-- <td th:text="${tempUserAccount.dateOfBirth}">-->
 			<td th:text="${#dates.format(tempUserAccount.dateOfBirth, 'dd-MM-yyyy')}"></td>
-			
 			<td th:text="${tempUserAccount.email}">
+			<td>
+				<a th:href="@{/user-accounts/showFormForUpdate(userAccountId=${tempUserAccount.id})}"
+					class="btn btn-info btn-sm">Update</a>
+			
+			</td>
+			
+			
 		</tbody>
+		
 	</table>
 	
 	</div>

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/user-accounts")
@@ -55,6 +56,17 @@ public class UserAccountController {
     	
     	// use a redirect to prevent duplicate submissions
     	return "redirect:/user-accounts/list";
+    	
+    }
+    
+    @GetMapping("/showFormForUpdate")
+    public String updateUserAccount(@RequestParam("userAccountId") int theId, Model thModel) {
+    	
+    	UserAccount theUserAccount = userAccountService.findById(theId);
+    	
+    	thModel.addAttribute("userAccount", theUserAccount);
+    	
+    	return "useraccounts/user-account-form";
     	
     }
 }
