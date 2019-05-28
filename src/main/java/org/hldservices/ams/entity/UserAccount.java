@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
@@ -34,12 +35,21 @@ public class UserAccount {
 	
 	@Column(name="date_of_birth")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@Temporal(TemporalType.DATE)
 	private Date dateOfBirth;
 	
 	public UserAccount() {
 		// TODO Auto-generated constructor stub
 	}
 
+	public UserAccount(String firstName, String lastName, String email, Date dateOfBirth) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.dateOfBirth = dateOfBirth;
+	}
+	
 	public UserAccount(int id, String firstName, String lastName, String email, Date dateOfBirth) {
 		super();
 		this.id = id;
