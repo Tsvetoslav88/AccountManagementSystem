@@ -16,7 +16,14 @@ Small web application that manages user accounts in a database. The application 
 - MySql 8(preferred)
 - OS - Windows 7/8/10, Mac OS X 10.9 or higher, Ubuntu LTS 12.04 or higher
 
-# Architecture
+# Software Stack
+- Java 8
+- Spring Code, Spring MVC, Spring boot and Spring Data JPA
+- MySQL DB
+- Thymeleaf
+- Maven
+- Git
+- CircleCI
 
 # Development
 
