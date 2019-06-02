@@ -26,5 +26,9 @@ Small web application that manages user accounts in a database. The application 
 - CircleCI
 
 # Development
+- Create MySQL schema `ams`. Use for DB authentication `springstudent`/`springstudent`
+- Build the application using Maven command `mvn clean install`
 
 # Deployment
+- Run the produced jar file using `java -jar .\target\ams-0.0.1-SNAPSHOT.jar`
+- Access the application on `http://localhost:8080`
